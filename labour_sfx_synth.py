@@ -34,7 +34,7 @@ for t0,f in [(0.9,523.25),(1.4,659.25),(2.4,783.99)]: addw(t0,bell(f,0.9),0.30) 
 for t0 in [4.0,5.6,7.2,8.8,10.4,12.0]: addw(t0,bell(880.0,0.35),0.06)            # reason cycles (soft)
 addw(3.2,whoosh(0.4),0.14)                                                        # arrow
 addw(3.6,whoosh(0.55),0.16)                                                       # HOPI swell
-for p0,cnt in [(4.0,6),(5.3,8),(6.6,8)]:                                          # item sparkles (gentle run)
+for p0,cnt in [(4.0,5),(5.3,6),(6.6,9)]:                                          # item sparkles (gentle run)
     for i in range(cnt): addw(p0+0.25+i*0.14, bell(784+i*70,0.3), 0.045)
 addw(9.1,chord([261.63,329.63,392.0],2.2),0.20)                                   # warm resolve chord
 addw(9.2,whoosh(0.6),0.10)                                                         # footer settle

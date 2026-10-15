@@ -15,12 +15,12 @@ GOLD=(230,186,96); GOLDB=(236,204,140); CARDBG=(40,34,20); CARDED=(150,120,60); 
 CYAN=(0,188,204); CYAN_D=(10,96,108); HOPIBG=(16,32,36); COLBG=(24,44,48); COLED=(14,70,80)
 TEXT=BR.TEXT; TEXTDIM=BR.TEXTDIM; DOT=(120,200,210)
 
-REASONS=["previous 2 scars","placenta previa","fetal distress","failure to progress","CPD","bad obstetric Hx"]
-PREOP=["delivery site","blood crossmatched","IV line","urinary catheter","consent","fasting (NPO)"]
+REASONS=["previous 2 scars","breech / transverse lie","placenta previa","fetal distress","failure to progress"]
+PREOP=["fetal heart (CTG)","investigations","blood crossmatched","IV line","urinary catheter"]
 INTRAOP=["anaesthesia (GA/regional)","route / incision","operation time","easy / difficult",
-         "episiotomy (if vaginal)","forceps / instruments","blood loss / transfusion","complications in op"]
+         "blood loss / transfusion","complications in op"]
 POSTOP=["return of consciousness","nausea / vomiting","bowel & flatus","micturition",
-        "post-partum bleeding","mobility / walking","breast-feeding","analgesia"]
+        "post-partum bleeding","mobility / walking","breast-feeding","analgesia","fever / temperature"]
 
 # ---- VFX setup ----
 _T=0.0
@@ -77,7 +77,7 @@ def col(d,x,w,title,items,p0,t):
     for i,it in enumerate(items):
         pi=smooth((t-(p0+0.25+i*0.14))/0.3)
         if pi<=0: continue
-        iy=y0+17+i*10; ox=int(-5*(1-oshoot(pi)))
+        iy=y0+15+i*9; ox=int(-5*(1-oshoot(pi)))
         el(d,x+6+ox,iy+2,x+9+ox,iy+5,lerp(HOPIBG,DOT,pi))
         if 0.1<pi<0.9:
             g=math.sin(pi*math.pi); spark(d,x+7+ox,iy+3,2+int(2*g),lerp(HOPIBG,(230,250,255),g))
