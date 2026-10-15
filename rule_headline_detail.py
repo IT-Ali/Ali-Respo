@@ -17,7 +17,7 @@ TEXT=BR.TEXT; TEXTDIM=BR.TEXTDIM; DOT=(120,200,210)
 # (name, dest, headline, extras)   dest = where the HEADLINE lands
 TOPICS=[
  ("PPH","HOPI","Did she bleed heavily?",["amount / pads","clots","timing (1ry / 2ry)","felt faint?","treatment given"]),
- ("EPISIOTOMY","CC","Any cut or stitches?",["why it was done","healing","pain","dyspareunia"]),
+ ("EPISIOTOMY","HOPI","Any cut or stitches?",["why it was done","healing","pain","dyspareunia"]),
  ("ROUTE","CC","How did she deliver?",["incision type","forceps / vacuum?"]),
  ("DIFFICULTY","HOPI","Easy or difficult labour?",["how long","obstructed / prolonged","what was done"]),
  ("RECOVERY","HOPI","How was recovery?",["bowel & flatus","bladder","mobility","feeding"]),
@@ -57,7 +57,7 @@ def render(t):
     bg_fx(d,t)
     rr(d,0,0,GW-1,30,WALL2)
     TLX.add(16,4,"ONE HEADLINE  ->  WHERE IT LANDS",(8,12,22),'body'); TLX.add(15.6,3.6,"ONE HEADLINE  ->  WHERE IT LANDS",TEXT,'body')
-    TLX.add(16,20,"always ask the headline  -  most go to the HOPI; route & episiotomy note to the complaint",TEXTDIM,'small')
+    TLX.add(16,20,"always ask the headline  -  most go to the HOPI; only the route (mode) notes to the complaint",TEXTDIM,'small')
 
     c=min(len(TOPICS)-1,int(t//W)); local=t-c*W
     vis=min(smooth(local/0.35),smooth((W-local)/0.35))
@@ -95,7 +95,6 @@ def render(t):
         k=vis*(g if hot else 0.5)
         iy=by0+17+i*11
         lbl=it
-        if hot and name=="EPISIOTOMY": lbl="route of delivery  + episiotomy"
         if hot: rr(d,bx0+3,iy-1,bx1-3,iy+9,lerp(CARDBG,(90,72,34),g*vis))
         el(d,bx0+8,iy+3,bx0+11,iy+6,lerp(CARDBG,GOLD,k))
         TLX.add(bx0+15,iy,lbl,lerp(CARDBG,(GOLDB if hot else (170,150,110)),k),'tiny')
@@ -133,7 +132,7 @@ def render(t):
     # ---- footer rule ----
     pf=smooth((t-0.5)/0.6)
     rr(d,8,246,472,267,lerp(WALL,(28,24,34),pf))
-    r="Always ask the headline  *  route & episiotomy -> complaint (details -> HOPI)"
+    r="Always ask the headline  *  route (mode) -> complaint  *  everything else -> HOPI"
     rw=TLX.w(r,'small'); TLX.add(240-rw/2,250,r,lerp(WALL,(210,200,180),pf),'small')
 
     big=im.resize((GW*SCALE,GH*SCALE),Image.NEAREST); bd=ImageDraw.Draw(big); TLX.flush(bd)

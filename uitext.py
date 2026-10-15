@@ -1,8 +1,10 @@
 """Crisp 4K UI text layer using a readable pixel TTF (Pixelify Sans).
 Text is collected in grid coords during scene build, then drawn at full 4K after
 upscale — so it's sharp & readable while the art stays chunky-pixel."""
+import os
 from PIL import ImageFont
-FONT_PATH=r'D:/Ue/UE_5.8/obgyn_explainer/fonts/Poppins-SemiBold.ttf'
+_WINFONT=r'D:/Ue/UE_5.8/obgyn_explainer/fonts/Poppins-SemiBold.ttf'
+FONT_PATH=_WINFONT if os.path.exists(_WINFONT) else os.path.join(os.path.dirname(os.path.abspath(__file__)),'fonts','Poppins-SemiBold.ttf')
 
 class TL:
     SIZES={'title':76,'body':60,'small':52,'tiny':46}

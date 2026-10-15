@@ -5,7 +5,8 @@
 """
 import numpy as np, math, subprocess, sys, os
 from PIL import Image, ImageDraw
-FFMPEG=r'D:/Ue/UE_5.8/socrates_fix/work/bin/ffmpeg.exe'
+_WINFF=r'D:/Ue/UE_5.8/socrates_fix/work/bin/ffmpeg.exe'
+FFMPEG=os.environ.get('FFMPEG', _WINFF if os.path.exists(_WINFF) else 'ffmpeg')
 GW,GH,SCALE=480,270,8
 FPS,DUR=24,12.0
 
