@@ -1,0 +1,15 @@
+﻿*.mp4
+*.wav
+*.zip
+*.png
+b*.png
+wc_*.png
+chk_*.png
+still_*.png
+integ_*.png
+SLIDE06_pigeon/
+SLIDE06_pigeon_deliverables/
+SLIDE06_1080/
+SLIDE06_1080_music/
+chatgpt_bundle/
+__pycache__/
