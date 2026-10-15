@@ -73,3 +73,35 @@ User reordered to question->explaining->answer->bridge and wanted ONE continuous
 
 ## PER-SECTION MERGES (earlier output)
 One video PER BEAT = that beat's montage opener + its focus clips, 0.5s crossfades (xfade + acrossfade). Built by `merge_part.py <codes...>` (xfade offset_k=k*11.5, preset veryfast crf20) -> `beatNN_section_crossfade_4K.mp4` (12 files, beats 02-13). Chosen over the single 13-min `merge_slide06.py` (that one kept getting killed by session teardown mid-render; the per-section files are short, fast, robust, and easier to edit with). The single-merge script still exists if ever wanted. ALL 12 SECTIONS DELIVERED.
+
+---
+
+# HISTORY-TAKING TEACHING SET (separate thread — the HOPI / chief-complaint clips)
+Built on top of the beats: a set teaching *how to organise & take* the obstetric history. Scripts: `pph_vs_normal.py`, `labour_history_map.py`, `rule_headline_detail.py`, `worked_case.py` (bedside, patient answers → sheet), `worked_hopi.py` (flowing written HOPI, continuous paragraph, sub-phase tints, corner pigeon). Cast reuses `BR.student()` pigeon + `hud.py`. Chill music bed + SFX on each.
+
+## The 6 HOPI "branch" types (from the deck's station-5 "branch according to the complaint")
+Backbone (demographic → CC → HOPI → ROS → past obs/gynae → PMH/FH/SH) is FIXED every case; only the HOPI grows per complaint. The 6 branches:
+1. Lower abdominal / labour pain → SOCRATES-style characterisation
+2. Elective C-section (asymptomatic planned admission) → pre/intra/post-op story
+3. Vaginal bleeding → amount·colour·clots·onset·timing·pain(painless=praevia/painful=abruption)·contractions·shock·fetal movements·precipitants
+4. Watery discharge / ROM → colour·smell·amount·timing·±contractions·fetal movements·±bleeding
+5. Pre-eclampsia symptoms → headache·visual disturbance·epigastric pain·swelling·±BP
+6. Reduced fetal movement → onset·pattern·last felt·associated bleeding/pain
+
+## EXAM FREQUENCY ANALYSIS (5 exams: 2022-23 2nd+3rd course, 2024 course1+course2, + Exam_1) — DONE
+Tallied ~103 case stations by chief complaint across all 5 files:
+| HOPI type | Count | Status |
+|---|---|---|
+| Abdominal / labour pain | ~34 | ✅ done (SOCRATES clip) |
+| Elective C-section | ~30 | ✅ done (Huda worked case) |
+| **Vaginal bleeding** | ~14 | ❌ BUILD NEXT (biggest gap) |
+| **Watery discharge / ROM** | ~9 | ❌ build |
+| **Pre-eclampsia symptoms** | ~8 | ❌ build |
+| Post-date | ~4 | ⚠️ not in the 6; reads as a *reason* for CS/induction, fold into existing content |
+| **Reduced fetal movement** | ~2 | ❌ build last (rare) |
+| Hyperemesis (vomiting) | ~1 | out of scope (deck correctly excluded) |
+| Cervical cerclage | ~1 | out of scope (early-pregnancy, rare) |
+
+**Key finding:** the 2 clips already built ARE the 2 highest-frequency types. Highest-yield work is done.
+**Build priority for the remaining 4:** (1) Vaginal bleeding ~14 → (2) Watery discharge/ROM ~9 → (3) Pre-eclampsia ~8 → (4) Reduced fetal movement ~2.
+Each new clip = same format (`worked_case` bedside and/or `worked_hopi` written paragraph), silent B-roll (concept already taught by VO in the abdominal-pain & elective-CS clips), only the symptom-characterisation question-set changes per type.
