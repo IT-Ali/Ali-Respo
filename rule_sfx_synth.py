@@ -25,7 +25,7 @@ def whoosh(dur=0.5):
     return no*np.sin(np.pi*tt/dur)**2
 
 HEADNOTE=[523.25,587.33,659.25,587.33,523.25]   # soft C-D-E-D-C across the 5 topics
-ROWCNT=[6,4,2,4,5]                               # chips per topic (headline+extras or details)
+ROWCNT=[6,5,1,4,5]                               # chips per topic (headline+extras, or details-only for route/CC)
 for c in range(5):
     T0=c*W
     addw(T0+0.1, bell(HEADNOTE[c],0.95), 0.27)                 # headline bell

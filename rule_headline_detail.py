@@ -17,8 +17,8 @@ TEXT=BR.TEXT; TEXTDIM=BR.TEXTDIM; DOT=(120,200,210)
 # (name, dest, headline, extras)   dest = where the HEADLINE lands
 TOPICS=[
  ("PPH","HOPI","Did she bleed heavily?",["amount / pads","clots","timing (1ry / 2ry)","felt faint?","treatment given"]),
- ("EPISIOTOMY","HOPI","Any cut or stitches?",["why it was done","healing","pain","dyspareunia"]),
- ("ROUTE","CC","How did she deliver?",["incision type","forceps / vacuum?"]),
+ ("EPISIOTOMY","HOPI","Any cut or stitches?",["bleeding at the site","perineal pain","dysuria","haematuria"]),
+ ("ROUTE","CC","How did she deliver?",["forceps / vacuum (if assisted)"]),
  ("DIFFICULTY","HOPI","Easy or difficult labour?",["how long","obstructed / prolonged","what was done"]),
  ("RECOVERY","HOPI","How was recovery?",["bowel & flatus","bladder","mobility","feeding"]),
 ]
