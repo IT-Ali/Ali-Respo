@@ -14,15 +14,15 @@ GOLD=(230,186,96); GOLDB=(236,204,140); CYAN=(0,188,204); TEXT=BR.TEXT; TEXTDIM=
 RED=(226,92,96); REDB=(242,150,150)
 
 CCF=[("COMPLAINT","Vaginal bleeding"),("DURATION","A few hours")]
-HOF=[("ONSET / AMOUNT","Drops -> large + clots"),("PAIN?","Painless  (praevia)"),
-     ("CONTRACTIONS","None"),("DIZZY / FAINT?","Light-headed"),
-     ("FETAL MOVEMENTS","Good"),("BEFORE / CAUSE","Bled 19wk; low-lying")]
+HOF=[("ONSET / AMOUNT","Drops->large, red+clots"),("PAIN?","Painless  (praevia)"),
+     ("DIZZY / FAINT?","Light-headed"),("FEVER?","None"),
+     ("FETAL MOVEMENTS","Good"),("BEFORE / LOW-LYING","Bled 19wk; low-lying")]
 
-Q=[["What brought","you in today?"],["How long has","it been going?"],["How much - and","any clots?"],
-   ["Any pain with","the bleeding?"],["Any tightenings","or contractions?"],["Felt dizzy","or faint?"],
-   ["Is the baby","still moving?"],["Happened before","- any trigger?"]]
-PATIENT=[["I've been","bleeding"],["Just a few","hours"],["Drops, then a","lot - with clots"],
-   ["No, no pain","at all"],["No tightenings"],["A little","light-headed"],
+Q=[["What brought","you in today?"],["How long has","it been going?"],["How much - what","colour, any clots?"],
+   ["Any pain with","the bleeding?"],["Felt dizzy","or faint?"],["Any fever?"],
+   ["Is the baby","still moving?"],["Happened before","- any cause?"]]
+PATIENT=[["I've been","bleeding"],["Just a few","hours"],["Drops, then a","lot - red, clots"],
+   ["No, no pain","at all"],["A little","light-headed"],["No, no fever"],
    ["Yes, moving","well"],["Once, at 19wk","- low-lying"]]
 PHASE=["CHIEF COMPLAINT","CHIEF COMPLAINT","HOPI  -  THE BLEED","HOPI  -  THE BLEED","HOPI  -  THE BLEED",
        "HOPI  -  THE BLEED","HOPI  -  THE BLEED","HOPI  -  THE BLEED"]

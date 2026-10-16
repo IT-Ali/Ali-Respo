@@ -39,8 +39,8 @@ def canon_mini(d,x,y,t):
 DEMO="Fatima Ahmed, 25, housewife, blood group A+, from Baghdad. Husband Jamal, 25, free worker. Gravida 4, para 3, abortion 0 - now 32 weeks, with two previous caesarean sections."
 COMPLAINT="Admitted with painless vaginal bleeding of a few hours' duration."
 SUBS=[("ONSET & AMOUNT","At 32 weeks she presented with vaginal bleeding for a few hours; it began as a few drops and, an hour later, became a large amount of fresh red blood with clots."),
- ("CHARACTER","It was painless - she had no abdominal pain and no uterine contractions."),
- ("SEVERITY & FETUS","She felt light-headed but did not faint, and the baby has been moving well."),
+ ("CHARACTER","It was painless - she had no abdominal pain."),
+ ("SEVERITY & FETUS","She felt light-headed but did not faint; she had no fever, and the baby has been moving well."),
  ("BACKGROUND","This was not her first episode - she had bled once before at nineteen weeks, when she was found to have a low-lying placenta. She is now under observation and awaiting a blood transfusion.")]
 SUBTAGS=[s[0] for s in SUBS]
 SUBINK=[(40,44,58),(26,54,80),(22,66,62),(58,46,72)]   # subtle per-sub-phase tints (dark, readable)
